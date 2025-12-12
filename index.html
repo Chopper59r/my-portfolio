@@ -1,0 +1,1105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Tells the browser this is an HTML5 document -->
+    <meta charset="utf-8">
+    <!-- Makes the page responsive on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- The text that appears in the browser tab -->
+    <title>My Portfolio</title>
+
+    <!-- Bootstrap CSS (loaded from a CDN).
+         This gives you all the Bootstrap styling and components. -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    >
+
+    <!-- Link to your own custom CSS file.
+         This will override or add to Bootstrap's default styles. -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+      <body>
+    <!-- ===========================
+         Navigation Bar
+         ===========================
+         - Uses Bootstrap's navbar component
+         - fixed-top: sticks to the top of the page when scrolling
+         - navbar-expand-lg: full menu on large screens, collapses on small
+         - navbar-dark bg-dark: dark background with light text
+    -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <!-- Brand / Logo text.
+             Clicking this will scroll back to the hero section. -->
+        <a class="navbar-brand" href="#hero">My Portfolio</a>
+
+        <!-- Toggler button (hamburger icon) for small screens.
+             When clicked, it shows or hides the menu links. -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible part of the navbar (the menu links). -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <!-- ms-auto pushes the nav items to the right on larger screens. -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <!-- Each nav-link points to a section id on the page. -->
+            <li class="nav-item">
+              <a class="nav-link" href="#hero">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#hobbies">Hobbies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero section -->
+    <header id="hero" class="py-5">
+
+
+    <!-- Hero section (first big section with your name, title, and image).
+         The id="hero" lets us link directly to this section using #hero in the URL or navbar.
+         The class="py-5" is a Bootstrap spacing utility (padding-top and padding-bottom). -->
+        <!-- ===========================
+         Hero Section
+         ===========================
+         - First big section visitors see
+         - Introduces you (name, role, short intro)
+         - Includes a photo and call-to-action buttons
+    -->
+    <header id="hero" class="py-5 bg-light">
+      <div class="container">
+        <!-- Bootstrap grid: one row with two columns (text + image). -->
+        <div class="row align-items-center">
+          
+          <!-- TEXT COLUMN -->
+          <!-- order-2 order-md-1:
+               - On small screens, this column appears second
+               - On medium+ screens, it appears first (to the left)
+          -->
+          <div class="col-md-6 order-2 order-md-1">
+            <!-- Main heading: your name -->
+            <h1 class="display-4 fw-bold mb-3">Richard Akinbola</h1>
+
+            <!-- Subheading: your discipline / course -->
+            <p class="lead mb-4">
+              Cloud Computing Student | BSc (Hons) in Computing | Year 2024
+            </p>
+
+            <!-- Short introductory paragraph about you.
+                 Replace this text with your own description. -->
+            <p class="mb-4">
+              My name is Richard Akinbola, also known as Olufemi. I’m a fourth‑year Cloud 
+              Computing student at TUD, and I completed a Bachelor’s degree in Computing at DkIT 
+              in 2024. Born and raised in Ireland with Nigerian roots, I’m the youngest of three 
+              siblings. I’ve built hands‑on IT experience through university projects and lab work
+              at DkIT, and I’m passionate about applying cloud technologies to solve real 
+              problems. Outside of tech, I play basketball, enjoy gaming, and read manga to unwind.              
+            </p>
+
+            <!-- Call-to-action buttons:
+                 - One to scroll to Projects
+                 - One to scroll to Contact -->
+            <a href="#projects" class="btn btn-primary btn-lg me-2">
+              View My Projects
+            </a>
+            <a href="#contact" class="btn btn-outline-secondary btn-lg">
+              Contact Me
+            </a>
+          </div>
+
+          <!-- IMAGE COLUMN -->
+          <!-- order-1 order-md-2:
+               - On small screens, this column appears first
+               - On medium+ screens, it appears second (to the right)
+          -->
+          <div class="col-md-6 text-center order-1 order-md-2 mb-4 mb-md-0">
+            <!-- Profile image:
+                 - img-fluid: responsive image
+                 - rounded-circle: circular crop
+                 - shadow: subtle drop shadow
+                 - alt: accessible text description of the image
+                 into assets/img/ -->
+            <img
+              src="assets/img/profile.jpg"
+              class="img-fluid rounded-circle shadow"
+              alt="Photo of Your Name"
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+        <!-- ===========================
+         About Me Section
+         ===========================
+         -  Introduces who I am in more detail than the hero
+         -  Talking about my goals, interests, and strengths
+    -->
+    <section id="about" class="py-5 bg-white">
+      <div class="container">
+        <!-- Section heading row -->
+        <div class="row justify-content-center mb-4">
+          <div class="col-lg-8 text-center">
+            <!-- Main heading for the section -->
+            <h2 class="mb-3">About Me</h2>
+
+            <!-- Lead paragraph: a short, slightly larger intro line -->
+            <p class="lead">
+              I am a motivated cloud computing student with a passion for building
+              clean, user-friendly web applications and learning to use new
+              technologies.
+            </p>
+          </div>
+        </div>
+
+        <!-- Content row -->
+        <div class="row justify-content-center">
+          <!-- Main description column -->
+          <div class="col-lg-8">
+            <!-- Regular paragraph(s) with more detail about you.
+                 Replace this text with your own story. -->
+            <p>
+             I study at TUD and currently undergoing my <strong>BSc (Hons) in Computing</strong>,where I have the
+             foundational knowledge of web development, programming, scripting and many more along with the cloud 
+             platforms like Azure and AWS. For my assignments and practicals, I developed full-stack prototypes,
+             which included automated deployment scripts and cloud-hosted services that showcase my technical 
+             prowess as well as my knowledge of scaling architecture. I like to work on solving problems. I also
+             like working in cross‑functional teams. I also like to learn a lot through classwork and personal projects.
+             I take a hands-on approach that focuses on practical outcomes, breaking down problems into testable 
+             steps, writing maintainable code, and automating repetitive tasks to reduce human error.  I am good
+             at both front-end and back-end development, building RESTful APIs and using Infrastructure as Code 
+             for provisioning environments. My group works as well as labs have helped me to learn effective
+             teamwork and communication skills. I always look to test cloud standards against real problems.  
+            </p>
+
+            <p>
+              I am particularly interested in front-end development and
+              user experience design, and I am eager to apply what I have
+              learned in a professional environment such as an internship
+              or graduate role.
+            </p>
+
+            <!-- Two-column layout for extra details -->
+            <div class="row mt-4">
+              <!-- Column 1: Quick facts -->
+              <div class="col-md-6 mb-3">
+                <h3 class="h5">Quick Facts</h3>
+                <ul class="list-unstyled mb-0">
+                  <li><strong>Course:</strong> BSc (Hons) in Computing</li>
+                  <li><strong>Year:</strong> 2nd / 3rd / 4th Year</li>
+                  <li><strong>Location:</strong> Dublin / TUD</li>
+                  <li><strong>Interests:</strong> Web Dev, UX, Data, etc.</li>
+                </ul>
+              </div>
+
+              <!-- Column 2: What you're looking for -->
+              <div class="col-md-6 mb-3">
+                <h3 class="h5">What I’m Looking For</h3>
+                <p class="mb-0">
+                  I am looking for opportunities to gain hands-on experience
+                  in software or web development, where I can contribute to
+                  real projects, learn from experienced developers, and grow
+                  both technically and professionally.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+        <!-- ===========================
+         Education Section
+         ===========================
+         - Summariseed my course and academic progress
+         - Includes a table of modules and grades from previous years
+    -->
+    <section id="education" class="py-5 bg-light">
+      <div class="container">
+        <!-- Section heading -->
+        <div class="row mb-4">
+          <div class="col">
+            <h2 class="mb-3">Education</h2>
+            <p class="text-muted mb-0">
+              An overview of my academic background and modules completed so far.
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- Left column: degree summary card -->
+          <div class="col-lg-4 mb-4">
+            <!-- Bootstrap card component to highlight your main course -->
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <!-- Degree / course name -->
+                <h3 class="h5 card-title">BSc in Computing</h3>
+                <!-- College / Institute name -->
+                <h4 class="h6 text-muted">DkIT / Institute of Technology</h4>
+
+                <!-- Short description of the course -->
+                <p class="card-text mt-3">
+                  A three-year degree focused on software development,
+                  web technologies, databases,internetworking and user experience design.
+                </p>
+
+                <!-- Useful quick details -->
+                <ul class="list-unstyled small mb-0">
+                  <li><strong>Current Year:</strong> 2nd / 3rd / 4th Year</li>
+                  <li><strong>Start Date:</strong> Sept 2021</li>
+                  <li><strong>Graduated:</strong> SEP 2024</li>
+                  <li><strong>Overall Grade:</strong> 2.1 </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right column: modules & grades table -->
+          <div class="col-lg-8">
+            <h3 class="h5 mb-3">Modules & Grades</h3>
+
+            <!-- table-responsive makes table scroll horizontally on small screens -->
+            <div class="table-responsive">
+              <!-- Bootstrap table with striped rows -->
+              <table class="table table-striped align-middle">
+                <thead class="table-light">
+                  <tr>
+                    <!-- scope="col" improves accessibility for screen readers -->
+                    <th scope="col">Year</th>
+                    <th scope="col">Module</th>
+                    <th scope="col">Grade</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!--  rows  -->
+                  <tr>
+                    <td>Year 1</td>
+                    <td>Programming Fundamentals</td>
+                    <td>A</td>
+                  </tr>
+                  <tr>
+                    <td>Year 1</td>
+                    <td>Web Design & Development</td>
+                    <td>B+</td>
+                  </tr>
+                  <tr>
+                    <td>Year 2</td>
+                    <td>Data Structures & Algorithms</td>
+                    <td>A-</td>
+                  </tr>
+                  <tr>
+                    <td>Year 2</td>
+                    <td>Databases</td>
+                    <td>B</td>
+                  </tr>
+                  <tr>
+                    <td>Year 3</td>
+                    <td>Interactive Web Development</td>
+                    <td>B+</td>
+                  </tr>
+                  <!-- Add or remove rows as needed -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- note under the table -->
+            <p class="small text-muted">
+              *Grades shown above are the grades from my perviouse degree not my ongoing degree.
+              as I am a transfer student doing an add on.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+        <!-- ===========================
+         Projects Section
+         ===========================
+         - Showcases 2nd, 3rd & 4th year projects
+         - Uses Bootstrap cards in a responsive grid
+         - Includes a simple filter bar (All / Year 2 / Year 3 / Year 4)
+           that I will make interactive with JavaScript later
+    -->
+    <section id="projects" class="py-5 bg-white">
+      <div class="container">
+        <!-- Section heading row -->
+        <div class="row mb-4">
+          <div class="col">
+            <h2 class="mb-3">Projects</h2>
+            <p class="text-muted mb-0">
+              A selection of projects I have completed during my degree,
+              including coursework and personal work.
+            </p>
+          </div>
+        </div>
+
+        <!-- Filter buttons row -->
+        <!-- These buttons don't do anything yet – later we will use JavaScript
+             to show/hide projects by year. -->
+        <div class="row mb-4">
+          <div class="col">
+            <!-- btn-sm: smaller buttons
+                 me-2: margin-end (right) spacing between buttons -->
+            <button class="btn btn-outline-primary btn-sm me-2 active"
+                    type="button"
+                    data-filter="all">
+              All
+            </button>
+            <button class="btn btn-outline-primary btn-sm me-2"
+                    type="button"
+                    data-filter="year2">
+              2nd Year
+            </button>
+            <button class="btn btn-outline-primary btn-sm me-2"
+                    type="button"
+                    data-filter="year3">
+              3rd Year
+            </button>
+            <button class="btn btn-outline-primary btn-sm"
+                    type="button"
+                    data-filter="year4">
+              4th Year
+            </button>
+          </div>
+        </div>
+
+        <!-- Projects grid row -->
+        <!-- Each project is in a col-md-6 col-lg-4 to form a responsive grid:
+             - On small screens: 1 per row
+             - On medium screens: 2 per row
+             - On large screens: 3 per row -->
+        <div class="row g-4" id="projectsGrid">
+          
+          <!-- =====  Project 1 (2nd Year) ===== -->
+          <!-- data-year attribute used for filtering later via JavaScript -->
+          <div class="col-md-6 col-lg-4" data-year="year2">
+            <div class="card h-100 shadow-sm">
+              <!-- Project image at the top of the card.
+                   Replace "project1.jpg" with your own image file. -->
+              <img src="assets/img/project1.jpg"
+                   class="card-img-top"
+                   alt="Screenshot of 2nd year project">
+
+              <div class="card-body d-flex flex-column">
+                <!-- Small badge to show which year the project is from -->
+                <span class="badge bg-primary mb-2">2nd Year</span>
+
+                <!-- Project title -->
+                <h3 class="h5 card-title">Interactive WebSite</h3>
+
+                <!-- Short description of what the project is -->
+                <p class="card-text">
+                  This project is a website made on Studio Ghibli as a fan site 
+                  using HTML CSS JAVASCRIPT and PHP. This site contains a 
+                  beautiful homepage with themed links to History, Portfolio, 
+                  Survey, and Giveaway, all styled after Ghibli. The website has
+                  some animations and interaction from the user like a logout and
+                  maybe some backend using PHP. Your layout and styling 
+                  abilities are showcased through design, but also that some 
+                  server-side logic is included for account management. All in all, 
+                  the Ghibli-inspired work creatively fuses design, interactivity, and technical execution.
+                </p>
+
+                <!-- Technologies list (small text) -->
+                <p class="small text-muted mb-2">
+                  <strong>Technologies:</strong> HTML, CSS, JavaScript, PHP
+                </p>
+
+                <!-- Spacer to push button to the bottom of the card -->
+                <div class="mt-auto">
+                  <!-- Optional link – can point to GitHub or a live demo.
+                       For now, it can just be a placeholder (#). -->
+                  <a href="#"
+                     class="btn btn-sm btn-outline-secondary">
+                    View Details
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== Project 2 (3rd Year) ===== -->
+          <div class="col-md-6 col-lg-4" data-year="year3">
+            <div class="card h-100 shadow-sm">
+              <img src="assets/img/project2.jpg"
+                   class="card-img-top"
+                   alt="Screenshot of 3rd year project">
+
+              <div class="card-body d-flex flex-column">
+                <span class="badge bg-success mb-2">3rd Year</span>
+
+                <h3 class="h5 card-title">Packet Tracer project</h3>
+                <p class="card-text">
+                  The project involved the design and implementation of a robust 
+                  scalable network infrastructure for a new Dublin air traffic 
+                  control tower. The paper outlines clear business goals, which includes 
+                  enhancing the passenger experience, improving air 
+                  traffic management and guaranteeing safety with secure 
+                  communication and intrusion detection systems. The issues
+                  with finances and limits of technology such  as budget, deploy 
+                  time and legacy system join. To configure reliable and future-
+                  proof structured cabling (Cat5e, Cat6, Cat6a, fibre optics),
+                  leased lines, patch panels that will be used with a tree topology. 
+                  Ultimately, the project demonstrates a well-rounded approach 
+                  to creating a resilient, high-performance network with the 
+                  complex needs for modern aviation control.
+                </p>
+
+                <p class="small text-muted mb-2">
+                  <strong>Technologies:</strong> Packet Tracer, Cisco IOS, Network Design
+                </p>
+
+                <div class="mt-auto">
+                  <a href="#"
+                     class="btn btn-sm btn-outline-secondary">
+                    View Details
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== Project 3 (4th Year) ===== -->
+          <div class="col-md-6 col-lg-4" data-year="year4">
+            <div class="card h-100 shadow-sm">
+              <img src="assets/img/project3.jpg"
+                   class="card-img-top"
+                   alt="Screenshot of 4th year project">
+
+              <div class="card-body d-flex flex-column">
+                <span class="badge bg-warning text-dark mb-2">4th Year</span>
+
+                <h3 class="h5 card-title">Final Year Project Title(still ongoing)</h3>
+                <p class="card-text">
+                  DRaaS or Disaster Recovery as a Service solution for a small business and this project reviews 
+                  their feasibility usability and effectiveness. Are large public cloud providers really able to meet 
+                  the disaster recovery needs of small organization’s?
+                </p>
+
+                <p class="small text-muted mb-2">
+                  <strong>Technologies:</strong> Veeam,Rubrik
+                </p>
+
+                <div class="mt-auto">
+                  <a href="#"
+                     class="btn btn-sm btn-outline-secondary">
+                    View Details
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- You can duplicate & edit these blocks to add more projects.
+               Just remember to:
+               - Update data-year="year2|year3|year4"
+               - Change the badge text & colour if you like
+               - Change the image, title, description, and tech list -->
+        </div>
+      </div>
+    </section>
+
+
+        <!-- ===========================
+         Work Placement & Experience Section
+         ===========================
+         - Summarises my formal work placement and any other relevant roles
+         - Left side: quick placement summary
+         - Right side: timeline-style list of roles with responsibilities
+    -->
+    <section id="experience" class="py-5 bg-light">
+      <div class="container">
+        <!-- Section heading -->
+        <div class="row mb-4">
+          <div class="col">
+            <h2 class="mb-3">Work Placement & Experience</h2>
+            <p class="text-muted mb-0">
+              An overview of my professional experience, including my
+              work placement and other roles that have helped me develop
+              technical and interpersonal skills.
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- =====================
+               Placement summary card
+               ===================== -->
+          <div class="col-lg-4">
+            <!-- Card highlighting your main placement details -->
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <h3 class="h5 card-title">Placement Summary</h3>
+                <p class="card-text">
+                  I completed my work placement as a <strong>system administartor</strong>
+                  at <strong>KPMG Ireland</strong>, where I managed servers,networks and virtualization
+                  platforms like VMware and Hyper-V.
+                </p>
+
+                <!-- Key facts list -->
+                <ul class="list-unstyled small mb-0">
+                  <li><strong>Company:</strong> KPMG Ireland</li>
+                  <li><strong>Role:</strong> system administartor (Intern)</li>
+                  <li><strong>Duration:</strong> OCT 2024 – Aug 2025</li>
+                  <li><strong>Location:</strong>Dublin</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- =====================
+               Detailed experience list
+               ===================== -->
+          <div class="col-lg-8">
+            <!-- border-start creates a vertical line on the left
+                 ps-4 adds padding so the content doesn’t touch the line -->
+            <div class="border-start border-2 border-primary ps-4">
+              
+              <!-- ===== Experience Item 1: Placement ===== -->
+              <div class="mb-4">
+                <!-- Role title -->
+                <h3 class="h5 mb-1">Software Developer Intern</h3>
+
+                <!-- Company & location -->
+                <p class="mb-1">
+                  <strong>Company Name</strong> &middot; Intercom
+                </p>
+
+                <!-- Dates and type of role -->
+                <p class="small text-muted mb-2">
+                  Feb 2020 – Aug 2020 &middot; Remote
+                </p>
+
+                <!-- Bullet list of responsibilities / achievements -->
+                <ul class="small mb-0">
+                  <li>Assisted in developing and maintaining web applications using HTML, CSS, JavaScript, and Bootstrap.</li>
+                  <li>Collaborated with senior developers to fix bugs and implement new features.</li>
+                  <li>Participated in code reviews and team meetings, improving code quality and communication skills.</li>
+                  <li>Worked with version control tools such as Git and GitHub.</li>
+                </ul>
+              </div>
+
+              <!-- ===== Experience Item 2: Part-time / Other Role ===== -->
+              <div class="mb-4">
+                <h3 class="h5 mb-1">IT Support Assistant</h3>
+                <p class="mb-1">
+                  <strong>Company Name </strong> &middot; Fruition Group Ireland
+                </p>
+                <p class="small text-muted mb-2">
+                  Sept 2019 – Dec 2019 &middot; Part-time
+                </p>
+                <ul class="small mb-0">
+                  <li>Provided technical support to staff and students, resolving common hardware and software issues.</li>
+                  <li>Helped set up and maintain computer labs and equipment.</li>
+                  <li>Developed communication and problem-solving skills in a customer-facing environment.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+        <!-- ===========================
+         Skills & Achievements Section
+         ===========================
+         - Highlights my technical and soft skills
+         - Includes key achievements such as awards, certifications, etc.
+    -->
+    <section id="skills" class="py-5 bg-white">
+      <div class="container">
+        <!-- Section heading -->
+        <div class="row mb-4">
+          <div class="col">
+            <h2 class="mb-3">Skills &amp; Achievements</h2>
+            <p class="text-muted mb-0">
+              A summary of the technical and interpersonal skills I have
+              developed, along with some of my key achievements.
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- =====================
+               Technical skills column
+               ===================== -->
+          <div class="col-lg-6">
+            <h3 class="h5 mb-3">Technical Skills</h3>
+
+            <!-- Each skill uses a small heading + Bootstrap progress bar.
+                 Adjust the percentages to match your confidence level. -->
+
+            <!-- Programming Languages -->
+            <div class="mb-3">
+              <div class="d-flex justify-content-between">
+                <span>Programming (Java / C# / PHP / Python)</span>
+                <span class="small text-muted">Advanced</span>
+              </div>
+              <div class="progress" role="progressbar" aria-label="Programming skill level">
+                <div class="progress-bar" style="width: 80%;"></div>
+              </div>
+            </div>
+
+            <!-- Web Development -->
+            <div class="mb-3">
+              <div class="d-flex justify-content-between">
+                <span>Web Development (HTML, CSS, JavaScript, Bootstrap)</span>
+                <span class="small text-muted">Advanced</span>
+              </div>
+              <div class="progress" role="progressbar" aria-label="Web development skill level">
+                <div class="progress-bar" style="width: 85%;"></div>
+              </div>
+            </div>
+
+            <!-- Databases -->
+            <div class="mb-3">
+              <div class="d-flex justify-content-between">
+                <span>Databases (SQL)</span>
+                <span class="small text-muted">Intermediate</span>
+              </div>
+              <div class="progress" role="progressbar" aria-label="Database skill level">
+                <div class="progress-bar" style="width: 70%;"></div>
+              </div>
+            </div>
+
+            <!-- Other tools / technologies -->
+            <div class="mb-3">
+              <div class="d-flex justify-content-between">
+                <span>Version Control (Git &amp; GitHub)</span>
+                <span class="small text-muted">Intermediate</span>
+              </div>
+              <div class="progress" role="progressbar" aria-label="Version control skill level">
+                <div class="progress-bar" style="width: 75%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =====================
+               Soft skills & achievements column
+               ===================== -->
+          <div class="col-lg-6">
+            <h3 class="h5 mb-3">Soft Skills</h3>
+
+            <!-- List group to show soft skills as labelled items -->
+            <ul class="list-group mb-4">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Teamwork &amp; Collaboration
+                <span class="badge bg-primary rounded-pill">Strong</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Communication
+                <span class="badge bg-primary rounded-pill">Strong</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Problem-Solving
+                <span class="badge bg-primary rounded-pill">Strong</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Time Management
+                <span class="badge bg-primary rounded-pill">Developing</span>
+              </li>
+            </ul>
+
+            <h3 class="h5 mb-3">Achievements</h3>
+
+            <!-- Achievements list, styled as small cards / callouts -->
+            <div class="list-group">
+              <!-- Achievement 1 -->
+              <div class="list-group-item">
+                <h4 class="h6 mb-1">Academic Achievement / Award</h4>
+                <p class="small mb-1">
+                  Achieved First Class honours at webdesign in Year 2 
+                  for creating the fan website on Ghibli studios.
+                </p>
+                <p class="small text-muted mb-0">
+                  Year: 2022
+                </p>
+              </div>
+
+              <!-- Achievement 2 -->
+              <div class="list-group-item">
+                <h4 class="h6 mb-1">Certification - Sysops administartor</h4>
+                <p class="small mb-1">
+                  Completed an online course in managing AWS cloud operations
+                  I deplpoyed service like RDS,EC2 and VPCS
+                  and I willingness to learn beyond the curriculum.
+                </p>
+                <p class="small text-muted mb-0">
+                  Provider: AWS
+                </p>
+              </div>
+
+              <!-- Achievement 3 -->
+              <div class="list-group-item">
+                <h4 class="h6 mb-1">Hackathon</h4>
+                <p class="small mb-1">
+                  Participated in a hackathon
+                  where I helped design and build a working prototype
+                  within a limited timeframe.
+                </p>
+                <p class="small text-muted mb-0">
+                  Role: Front-end Developer / Team Lead
+                </p>
+              </div>
+
+              <!-- You can add or remove achievements as needed. -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+        <!-- ===========================
+         Hobbies & Interests Section
+         ===========================
+         - Shows who you are outside of college/work
+         - Helps employers see your personality and interests
+    -->
+    <section id="hobbies" class="py-5 bg-light">
+      <div class="container">
+        <!-- Section heading -->
+        <div class="row mb-4">
+          <div class="col">
+            <h2 class="mb-3">Hobbies &amp; Interests</h2>
+            <p class="text-muted mb-0">
+              Outside of my studies, I enjoy a range of activities that help
+              me stay creative, active, and motivated.
+            </p>
+          </div>
+        </div>
+
+        <!-- Hobbies grid -->
+        <!-- Use Bootstrap's grid system to show hobbies in responsive cards:
+             - On small screens: 1 per row
+             - On medium screens: 2 per row
+             - On large screens: 3 per row -->
+        <div class="row g-4">
+          
+          <!-- ===== Hobby 1 ===== -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <!-- Emoji is optional, just adds a bit of personality -->
+                <h3 class="h5 card-title mb-2">Sports &amp; Fitness 🏃‍♂️</h3>
+                <p class="card-text">
+                  I enjoy staying active through activities such as
+                  running, going to the gym, and playing team sports.
+                  Regular exercise helps me manage stress and maintain
+                  focus during busy academic periods.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== Hobby 2 ===== -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h3 class="h5 card-title mb-2">Technology &amp; Coding Projects 💻</h3>
+                <p class="card-text">
+                  In my spare time I like experimenting with new
+                  technologies, building small web apps, and exploring
+                  topics such as UI/UX design and automation. I enjoy
+                  learning by doing and often work on side projects to
+                  improve my skills.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== Hobby 3 ===== -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h3 class="h5 card-title mb-2">Gaming / Creative Interests 🎮</h3>
+                <p class="card-text">
+                  I am interested in video games and digital media, and I
+                  enjoy analysing game design, storytelling, and user
+                  experience. These hobbies inspire my creativity and
+                  often influence how I think about interactive systems.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+        <!-- ===========================
+         Contact Section
+         ===========================
+         - Shows how people can get in touch with you
+         - Includes contact details + a simple contact form
+         - Has a button that opens a modal with full contact info
+    -->
+    <section id="contact" class="py-5 bg-white">
+      <div class="container">
+        <!-- Section heading -->
+        <div class="row mb-4">
+          <div class="col">
+            <h2 class="mb-3">Contact Me</h2>
+            <p class="text-muted mb-0">
+              If you would like to discuss opportunities, projects, or have
+              any questions, feel free to reach out using the details or
+              contact form below.
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- =====================
+               Contact details column
+               ===================== -->
+          <div class="col-lg-4">
+            <h3 class="h5 mb-3">Contact Details</h3>
+
+            <!-- Basic contact info – replace with your real details -->
+            <ul class="list-unstyled mb-4">
+              <li class="mb-2">
+                <strong>Email:</strong>
+                <!-- mailto: opens the user's email client -->
+                <a href="mailto:your.email@example.com">richardakinbola0@gmail.com</a>
+              </li>
+              <li class="mb-2">
+                <strong>Phone:</strong>
+                <span>+353 99 851 801</span>
+              </li>
+              <li class="mb-2">
+                <strong>Location:</strong>
+                <span>Drogheada, Ireland</span>
+              </li>
+              <li class="mb-2">
+                <strong>LinkedIn:</strong>
+                <!-- Replace # with your actual LinkedIn profile URL -->
+                <a href="#" target="_blank" rel="noopener">
+                  https://www.linkedin.com/in/richard-akinbola-a06b51226/
+                </a>
+              </li>
+            </ul>
+
+            <!-- Button to open the contact modal -->
+            <!-- data-bs-toggle and data-bs-target are Bootstrap attributes
+                 that tell Bootstrap to open the modal with id="contactModal". -->
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#contactModal"
+            >
+              View Full Contact Info
+            </button>
+          </div>
+
+          <!-- =====================
+               Contact form column
+               ===================== -->
+          <div class="col-lg-8">
+            <h3 class="h5 mb-3">Send Me a Message</h3>
+
+            <!-- Simple contact form (front-end only for now) -->
+            <!-- Later, you could add JavaScript to validate or handle this form. -->
+            <form>
+              <!-- Name field -->
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <!-- form-control is the Bootstrap input styling -->
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your name"
+                  required
+                >
+              </div>
+
+              <!-- Email field -->
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                >
+              </div>
+
+              <!-- Subject field -->
+              <div class="mb-3">
+                <label for="subject" class="form-label">Subject</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="subject"
+                  name="subject"
+                  placeholder="Subject of your message"
+                >
+              </div>
+
+              <!-- Message textarea -->
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Write your message here..."
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Submit button.
+                   Right now, this will just submit the form to the same page.
+                   We can later intercept it with JavaScript if you want. -->
+              <button type="submit" class="btn btn-outline-primary">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         Contact Modal
+         ===========================
+         - Bootstrap modal component
+         - Opens when the "View Full Contact Info" button is clicked
+    -->
+    <div
+      class="modal fade"
+      id="contactModal"
+      tabindex="-1"
+      aria-labelledby="contactModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal header: title + close button -->
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactModalLabel">Full Contact Information</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <!-- Modal body: more detailed contact info -->
+          <div class="modal-body">
+            <p>
+              Thank you for your interest. You can contact me using any of the
+              methods below. I aim to respond as soon as possible.
+            </p>
+
+            <ul class="list-unstyled mb-3">
+              <li class="mb-2">
+                <strong>Full Name:</strong> Olufemi Akinbola
+              </li>
+              <li class="mb-2">
+                <strong>Email:</strong>
+                <a href="mailto:your.email@example.com">richardakinbola0@gmail.com</a>
+              </li>
+              <li class="mb-2">
+                <strong>Phone:</strong> +353 99 851 801
+              </li>
+              <li class="mb-2">
+                <strong>Location:</strong> Drogheada / Co.Louth, Ireland
+              </li>
+              <li class="mb-2">
+                <strong>LinkedIn:</strong>
+                <a href="#" target="_blank" rel="noopener">
+                  https://www.linkedin.com/in/richard-akinbola-a06b51226/
+                </a>
+              </li>
+              <!-- Optional extra: GitHub profile -->
+              <li class="mb-2">
+                <strong>GitHub:</strong>
+                <a href="#" target="_blank" rel="noopener">
+                  https://github.com/Chopper59r
+                </a>
+              </li>
+            </ul>
+
+            <p class="small text-muted mb-0">
+              Feel free to contact me regarding internships, graduate roles,
+              collaborations, or any questions about my work.
+            </p>
+          </div>
+
+          <!-- Modal footer: just a close button -->
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Contact Modal
+         A Bootstrap modal will pop up when a button in the contact section is clicked. -->
+
+    <!-- Bootstrap JS Bundle (also from CDN).
+         This includes the JavaScript needed for Bootstrap components (navbar, modal, etc.)
+         and Popper.js which is required for some components. -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous">
+    </script>
+
+    <!-- Link to your own JavaScript file.
+         This is where you’ll add custom interactivity beyond Bootstrap’s built-in stuff. -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

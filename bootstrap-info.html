@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Standard HTML5 meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Page title for the browser tab -->
+    <title>Bootstrap Features &amp; Hosting Info</title>
+
+    <!-- Bootstrap CSS (same CDN version as index.html) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    >
+  </head>
+
+  <!-- py-5 adds top & bottom padding to the whole page -->
+  <body class="py-5">
+    <div class="container">
+      <!-- ===========================
+           Page Heading
+           =========================== -->
+      <header class="mb-5">
+        <h1 class="mb-3">Bootstrap Features Used</h1>
+        <p class="lead mb-1">
+          This page summarises the Bootstrap 5 components, layout features,
+          and utilities used in my personal portfolio website.
+        </p>
+        <p class="text-muted mb-0">
+          All layout and styling are implemented by combining Bootstrap with
+          my own custom CSS and JavaScript.
+        </p>
+      </header>
+
+      <!-- Optional small navigation back to the main page -->
+      <div class="mb-4">
+        <a href="index.html" class="btn btn-outline-primary btn-sm">
+          ← Back to Portfolio
+        </a>
+      </div>
+
+      <!-- ===========================
+           Section 1: Components
+           =========================== -->
+      <section class="mb-5">
+        <h2 class="h4 mb-3">Bootstrap Components</h2>
+        <p class="text-muted">
+          The following Bootstrap components are used throughout the portfolio
+          to structure content and create a clean, responsive design.
+        </p>
+
+        <!-- Using a Bootstrap list-group to display the components and where they appear -->
+        <div class="list-group">
+          <!-- Navbar -->
+          <div class="list-group-item">
+            <h3 class="h6 mb-1">Navbar</h3>
+            <p class="small mb-1">
+              Implemented using the <code>.navbar</code>, <code>.navbar-expand-lg</code>,
+              <code>.navbar-dark</code>, <code>.bg-dark</code>, and
+              <code>.fixed-top</code> classes to create a responsive, dark
+              navigation bar at the top of the page.
+            </p>
+            <p class="small mb-0">
+              Includes a collapsible menu using <code>.navbar-toggler</code>,
+              <code>.navbar-toggler-icon</code>, and <code>.collapse.navbar-collapse</code>.
+            </p>
+          </div>
+
+          <!-- Cards -->
+          <div class="list-group-item">
+            <h3 class="h6 mb-1">Cards</h3>
+            <p class="small mb-1">
+              Used to display content such as education details, project
+              summaries, work placement information, and hobby descriptions.
+              Implemented with <code>.card</code>, <code>.card-body</code>,
+              <code>.card-title</code>, and <code>.card-text</code>.
+            </p>
+            <p class="small mb-0">
+              Some cards also use <code>.shadow-sm</code> and <code>.h-100</code>
+              to add subtle shadows and equal heights.
+            </p>
+          </div>
+
+          <!-- Tables -->
+          <div class="list-group-item">
+            <h3 class="h6 mb-1">Tables</h3>
+            <p class="small mb-1">
+              A table is used in the Education section to list modules and
+              grades. This uses <code>.table</code>, <code>.table-striped</code>,
+              and <code>.table-responsive</code> to keep it readable on all devices.
+            </p>
+            <p class="small mb-0">
+              Table headings use <code>.table-light</code> for contrast.
+            </p>
+          </div>
+
+          <!-- Progress Bars -->
+          <div class="list-group-item">
+            <h3 class="h6 mb-1">Progress Bars</h3>
+            <p class="small mb-1">
+              The Skills &amp; Achievements section uses Bootstrap progress
+              bars to visually represent proficiency levels in different
+              technical skills.
+            </p>
+            <p class="small mb-0">
+              Implemented using <code>.progress</code> and
+              <code>.progress-bar</code>, with inline <code>style="width: X%;"</code>
+              to indicate the skill level.
+            </p>
+          </div>
+
+          <!-- List Group -->
+          <div class="list-group-item">
+            <h3 class="h6 mb-1">List Group</h3>
+            <p class="small mb-1">
+              Soft skills and achievements are displayed using
+              <code>.list-group</code> and <code>.list-group-item</code> to
+              keep the information structured and easy to read.
+            </p>
+            <p class="small mb-0">
+              Some items also include <code>.d-flex</code> and
+              <code>.justify-content-between</code> for aligned labels and badges.
+            </p>
+          </div>
+
+          <!-- Badges -->
+          <div class="list-group-item">
+            <h3 class="h6 mb-1">Badges</h3>
+            <p class="small mb-1">
+              Badges are used in the Projects section to indicate the year of
+              each project (e.g. 2nd Year, 3rd Year, 4th Year).
+            </p>
+            <p class="small mb-0">
+              Implemented using <code>.badge</code> with contextual colour
+              classes such as <code>.bg-primary</code>, <code>.bg-success</code>,
+              and <code>.bg-warning</code>.
+            </p>
+          </div>
+
+          <!-- Forms -->
+          <div class="list-group-item">
+            <h3 class="h6 mb-1">Forms</h3>
+            <p class="small mb-1">
+              The Contact section includes a simple contact form. Form fields
+              use <code>.form-label</code> and <code>.form-control</code> to
+              apply consistent Bootstrap styling.
+            </p>
+            <p class="small mb-0">
+              The form fields include text inputs and a textarea to collect
+              a name, email, subject, and message.
+            </p>
+          </div>
+
+          <!-- Modal -->
+          <div class="list-group-item">
+            <h3 class="h6 mb-1">Modal</h3>
+            <p class="small mb-1">
+              A Bootstrap modal is used to display full contact information
+              when the user clicks the "View Full Contact Info" button.
+            </p>
+            <p class="small mb-0">
+              Implemented with <code>.modal</code>, <code>.modal-dialog</code>,
+              <code>.modal-content</code>, <code>.modal-header</code>,
+              <code>.modal-body</code>, and <code>.modal-footer</code>, along
+              with <code>data-bs-toggle="modal"</code> and
+              <code>data-bs-target="#contactModal"</code>.
+            </p>
+          </div>
+
+          <!-- Buttons -->
+          <div class="list-group-item">
+            <h3 class="h6 mb-1">Buttons</h3>
+            <p class="small mb-1">
+              Various Bootstrap buttons are used throughout the site,
+              including primary, outline, and small buttons.
+            </p>
+            <p class="small mb-0">
+              Examples include <code>.btn</code>, <code>.btn-primary</code>,
+              <code>.btn-outline-primary</code>, <code>.btn-secondary</code>,
+              and <code>.btn-sm</code>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===========================
+           Section 2: Layout & Utilities
+           =========================== -->
+      <section class="mb-5">
+        <h2 class="h4 mb-3">Layout &amp; Utility Classes</h2>
+        <p class="text-muted">
+          The site makes extensive use of Bootstrap's layout system and
+          utility classes to create a responsive design without writing
+          large amounts of custom CSS.
+        </p>
+
+        <div class="row">
+          <!-- Layout & grid -->
+          <div class="col-md-6 mb-3">
+            <h3 class="h6 mb-2">Layout &amp; Grid</h3>
+            <ul class="small mb-0">
+              <li>
+                <code>.container</code> to centre and constrain content width.
+              </li>
+              <li>
+                <code>.row</code> and various <code>.col-</code> classes
+                (e.g. <code>.col-md-6</code>, <code>.col-lg-4</code>) to
+                create responsive grids for sections like Projects, Skills,
+                Experience, and Hobbies.
+              </li>
+              <li>
+                <code>.g-4</code> to add consistent gutters (spacing)
+                between columns.
+              </li>
+              <li>
+                <code>.order-*</code> classes (e.g. <code>.order-1</code>,
+                <code>.order-md-2</code>) in the hero section to control the
+                order of text and image on different screen sizes.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Utility classes -->
+          <div class="col-md-6 mb-3">
+            <h3 class="h6 mb-2">Utility Classes</h3>
+            <ul class="small mb-0">
+              <li>
+                Spacing: <code>.py-5</code>, <code>.mb-3</code>,
+                <code>.mb-4</code>, <code>.mt-4</code>, <code>.me-2</code>,
+                etc., to control margins and padding.
+              </li>
+              <li>
+                Typography: <code>.display-4</code>, <code>.fw-bold</code>,
+                <code>.lead</code>, <code>.h5</code>, <code>.h6</code>,
+                <code>.text-muted</code>, and <code>.text-center</code>.
+              </li>
+              <li>
+                Background &amp; borders: <code>.bg-light</code>,
+                <code>.bg-white</code>, <code>.bg-dark</code>,
+                <code>.border-start</code>, <code>.border-2</code>,
+                <code>.border-primary</code>.
+              </li>
+              <li>
+                Images &amp; shapes: <code>.img-fluid</code> for responsive
+                images and <code>.rounded-circle</code> for circular profile
+                images.
+              </li>
+              <li>
+                Flexbox: <code>.d-flex</code>, <code>.justify-content-between</code>,
+                <code>.align-items-center</code>, and <code>.mt-auto</code> to
+                control alignment inside cards and list items.
+              </li>
+              <li>
+                Shadows: <code>.shadow-sm</code> to add subtle drop shadows
+                to cards and images.
+              </li>
+              <li>
+                Visibility: <code>.d-none</code> is used dynamically by custom
+                JavaScript to hide and show project cards during filtering.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===========================
+           Section 3: JavaScript Usage
+           =========================== -->
+      <section class="mb-5">
+        <h2 class="h4 mb-3">JavaScript &amp; Interactivity</h2>
+
+        <p class="text-muted">
+          The site uses both Bootstrap's JavaScript bundle and my own custom
+          JavaScript file to provide interactive features.
+        </p>
+
+        <div class="mb-3">
+          <h3 class="h6 mb-2">Bootstrap JavaScript</h3>
+          <ul class="small mb-0">
+            <li>
+              The Bootstrap JavaScript bundle (including Popper) is loaded via
+              CDN using <code>bootstrap.bundle.min.js</code>.
+            </li>
+            <li>
+              This is used for:
+              <ul>
+                <li>Navbar collapse / expansion on small screens.</li>
+                <li>Opening and closing the contact information modal.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="h6 mb-2">Custom JavaScript (main.js)</h3>
+          <ul class="small mb-0">
+            <li>
+              A separate JavaScript file, <code>assets/js/main.js</code>,
+              contains my own custom code.
+            </li>
+            <li>
+              Project filtering:
+              <ul>
+                <li>
+                  Clicking the filter buttons (All / 2nd Year / 3rd Year / 4th Year)
+                  shows or hides project cards by adding/removing the
+                  <code>.d-none</code> class based on a <code>data-year</code> attribute.
+                </li>
+                <li>
+                  The active filter button is highlighted by toggling the
+                  <code>.active</code> class.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Contact form behaviour:
+              <ul>
+                <li>
+                  The contact form submission is intercepted with JavaScript
+                  to prevent a full page reload.
+                </li>
+                <li>
+                  A friendly <code>alert()</code> message is displayed to the
+                  user, and the form fields are reset.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===========================
+           Section 4: Hosting Information
+           =========================== -->
+      <section class="mb-5">
+        <h2 class="h4 mb-3">Hosting URL</h2>
+        <p class="text-muted">
+          Once the site is deployed to Azure and/or GitHub Pages, the live URL
+          will be recorded here.
+        </p>
+
+        <!-- Replace the placeholder below with your real hosted URL when ready -->
+        <div class="alert alert-info">
+          <p class="mb-1">
+            <strong>Portfolio URL:</strong>
+            <!-- Example: -->
+            <!-- <a href="https://yourname.github.io/my-portfolio" target="_blank" rel="noopener">
+                 https://yourname.github.io/my-portfolio
+               </a> -->
+          </p>
+          <p class="small mb-0">
+            This will be updated after deployment to Azure / GitHub.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Bootstrap JavaScript bundle (for any components used on this page, such as alerts) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous">
+    </script>
+  </body>
+</html>
